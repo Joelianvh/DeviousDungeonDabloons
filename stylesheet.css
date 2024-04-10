@@ -3,23 +3,46 @@
     font-family: Dragon FREE;
     src: url("../dragon_3/Dragon FREE.ttf") format("truetrype");
 }
+.WIPB{
+    width: 100vw;
+    height: 100vh;
+
+}
+.WIP{
+    width: 50vw;
+    margin-left: 600px;
+    height: fit-content;
+    overflow-y: hidden;
+}
+.WIPP{
+    position: absolute;
+    background-color: red;
+    font-size: 2em;
+    left: 20px;
+
+}
 body{
     margin: 0;
     top: 0;
     left: 0;
+    padding: 0;
     background-image: url(images/background_brown.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-color:  brown;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    height: 200vh;
+    width: 100vw;
     font-family: Dragon Free;
+    overflow-x: hidden;
 
 }
 .backgroundcontainer{
     position: absolute;
     pointer-events: none;
     width: 100vw;
-    height: 60vh;
-    bottom: 0;
+    height: 200vh;
+    
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.294));
 }
 
@@ -29,9 +52,12 @@ header{
     background: linear-gradient(red, brown);
     top: 0;
     margin-top: 0;
-    border: 1px solid black;
+    margin-left: 0;
+    left: 0;
+    border: 0.1rem solid black;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    align-self: center;
 }
 
 h1{
@@ -59,6 +85,10 @@ header nav ul{
 header nav ul li{
     padding-bottom: 2vh;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 header nav ul li:hover{
     padding-bottom: 2vh;
     text-decoration: underline;
@@ -69,21 +99,24 @@ header nav ul li:hover{
 
 section li{
     list-style: none;
-    border: black 2px solid;
+    border: black 0.1rem solid;
+    border-radius: 1rem;
     text-align: center;
     transition: all 200ms;
 
 
 }
 section li:hover{
-    animation: jiggle 1s infinite;
+    animation: jiggle 1s infinite ease-out;
     text-decoration: underline;
     transition: all 200ms;
+    cursor: pointer;
 
 }
 section ul{
     display: flex;
     flex-direction: row;
+
     width: 100vw;
     padding: 0;
     justify-content: space-evenly;
@@ -94,35 +127,282 @@ section ul li img{
     width: 20vw;
 
 }
+section{
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.306);
+}
+
 section ul li:nth-of-type(1){ background-color: grey;}
 section ul li:nth-of-type(2){ background-color: green;}
 section ul li:nth-of-type(3){ background-color: brown;}
-section ul li:nth-of-type(4){ background-color: pink;}
+section ul li:nth-of-type(4){ background-color: rgb(248, 152, 168);}
 
-section ul li:nth-of-type(1):hover{ background-color: rgb(138, 138, 138);}
-section ul li:nth-of-type(2):hover{ background-color: rgb(0, 141, 0);}
-section ul li:nth-of-type(3):hover{ background-color: rgb(176, 47, 47);}
-section ul li:nth-of-type(4):hover{ background-color: rgb(251, 196, 205);}
+section ul li:nth-of-type(1):hover{ background-color: rgb(163, 162, 162);}
+section ul li:nth-of-type(2):hover{ background-color: rgb(4, 189, 4);}
+section ul li:nth-of-type(3):hover{ background-color: rgb(207, 58, 58);}
+section ul li:nth-of-type(4):hover{ background-color: rgb(252, 193, 203);}
 
 @keyframes jiggle{
     0%{
         transform: translateY(0vh);
         opacity: 1;
+        border-radius: 1rem;
 
     }
-    /* 25%{
-        transform: translateY(1vh);
-    } */
-    50%{
-        transform: translateY(-1vh);
-        opacity: 0.9;
+    10%{
+        transform: translateY(-1.2vh);
     }
-    /* 75%{
-        transform: translateY(1vh);
-    } */
+    50%{
+        transform: translateY(-1.5vh);
+        opacity: 0.8;
+        border-radius: 2rem;
+        box-shadow: 0.1vw 0.15vw 0.5vw 0.2vw black ;
+    }
+    65%{
+        transform: translateY(-1.2vh);
+    }
     100%{
         transform: translateY(0vh);
         opacity: 1;
+        border-radius: 1rem;
     }
 }
 
+
+/* backface of card trial */
+.flipclass{
+    transform: rotateY(180deg);
+}
+.flip_container
+{
+    transition: all 1000ms;
+    transform-style: preserve-3d;
+
+    
+}
+.front, .back{
+    backface-visibility: hidden;
+}
+.back{
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    height: 30vh;
+    align-items: center;
+    position: absolute;
+    transform: rotateY(180deg);
+
+}
+.back p{
+    width: 20vw;
+}
+
+
+/* Who are we stukje */
+
+body main section:nth-of-type(1){
+    width: 100vw;
+
+}
+body main section:nth-of-type(1) div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+body main section:nth-of-type(1) div img{
+    width: 20vw;
+    height: 20vh;
+}
+
+
+/* playityourself pagina */
+aside img{
+    width: 10vw;
+}
+.playityourself{
+    display: flex;
+    flex-direction: row;
+}
+aside{
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    justify-content: center;
+
+}
+
+.playityourself section{
+    width: 50vw;
+    margin: 0;
+}
+
+
+/* card animation */
+
+aside img:nth-of-type(1){
+    animation: topleft 5s alternate infinite linear;
+}
+aside img:nth-of-type(2){
+    animation: topright 5s alternate infinite linear;
+}
+aside img:nth-of-type(3){
+    animation: bottomright 5s alternate infinite linear;
+}
+aside img:nth-of-type(4){
+    animation: bottomleft 5s alternate infinite linear;
+}
+@keyframes topleft{
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10vw, 0);
+    }
+    50% {
+        transform: translate(10vw, 25vh);
+    }
+    75% {
+        transform: translate(0, 25vh);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes topright{
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, 25vh);
+    }
+    50% {
+        transform: translate(-10vw, 25vh);
+    }
+    75% {
+        transform: translate(-10vw, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes bottomright{
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, -25vh);
+    }
+    50% {
+        transform: translate(10vw, -25vh);
+    }
+    75% {
+        transform: translate(10vw, 0);
+    }
+    100% {
+        transform: translate(0, 0); 
+    }
+}
+@keyframes bottomleft{
+    0% {
+        transform: translate(0, 0); 
+    }
+    25% {
+        transform: translate(-10vw, 0);
+    }
+    50% {
+        transform: translate(-10vw, -25vh); 
+    }
+    75% {
+        transform: translate(0, -25vh); 
+    }
+    100% {
+        transform: translate(0, 0); 
+    }
+}
+
+/* right side */
+aside:nth-of-type(2) img:nth-of-type(1){
+    animation: topleft 5s alternate-reverse infinite linear;
+}
+aside:nth-of-type(2) img:nth-of-type(2){
+    animation: topright 5s alternate-reverse infinite linear;
+}
+aside:nth-of-type(2) img:nth-of-type(3){
+    animation: bottomright 5s alternate-reverse infinite linear;
+}
+aside:nth-of-type(2) img:nth-of-type(4){
+    animation: bottomleft 5s alternate-reverse infinite linear;
+}
+/* @keyframes topleft2{
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+
+        transform: translate(0, 25vh);
+    }
+    50% {
+        transform: translate(10vw, 25vh);
+    }
+    75% {
+        transform: translate(10vw, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes topright2{
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-10vw, 0);
+    }
+    50% {
+        transform: translate(-10vw, 25vh);
+    }
+    75% {
+        transform: translate(0, 25vh);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes bottomright2{
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10vw, 0);
+    }
+    50% {
+        transform: translate(10vw, -25vh);
+    }
+    75% {
+        transform: translate(0, -25vh);
+    }
+    100% {
+        transform: translate(0, 0); 
+    }
+}
+@keyframes bottomleft2{
+    0% {
+        transform: translate(0, 0); 
+    }
+    25% {
+        transform: translate(0, -25vh);
+    }
+    50% {
+        transform: translate(-10vw, -25vh); 
+    }
+    75% {
+        transform: translate(-10vw, 0); 
+    }
+    100% {
+        transform: translate(0, 0); 
+    }
+} */

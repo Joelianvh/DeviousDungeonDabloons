@@ -56,6 +56,6 @@ function showSlide(n) {
 }
 
 // Automatic slideshow
-setInterval(() => {
+/* setInterval(() => {
   changeSlide(1);
-}, 3000); // Change slides every 3 seconds (adjust as needed)
+}, 3000); */ // Change slides every 3 seconds (adjust as needed)

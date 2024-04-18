@@ -25,11 +25,14 @@ p {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h2,
-h1 {
+h2, h1 {
     font-family: Dragon FREE;
     font-size: 5em;
     margin-bottom: 1vh;
+}
+
+h2{
+    font-size: 4em;
 }
 
 /* header */
@@ -98,22 +101,27 @@ main {
 main section {
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    width: 85vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
+}
+.introding {
+    margin-right: 2vw;
 }
 
 .addVideo {
     display: flex;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     width: 100vw;
     justify-content: center;
     background-color: #7AAB82;
 }
 
-.addVideo img {
+.addVideo video {
     width: 50vw;
+    border: outset #154d59 0.4rem;
+    border-radius: 0.2rem;
 }
 
 /* video gedeelte */
@@ -127,6 +135,7 @@ section:nth-of-type(2) {
 
 section:nth-of-type(2) img {
     width: 30vw;
+    
 }
 
 section:nth-of-type(2) div {
@@ -149,6 +158,7 @@ section:nth-of-type(2) div {
     flex-direction: column;
     align-items: center;
     color: #154d59;
+    
 }
 
 .Aboutus section:nth-of-type(1) div:nth-of-type(1) p {
@@ -196,6 +206,11 @@ section:nth-of-type(2) div {
 
 .Aboutus section:nth-of-type(2) div:nth-of-type(2) img {
     width: 17vw;
+
+}
+.Aboutus section:nth-of-type(2) div:nth-of-type(2) ul li:nth-of-type(1) img{
+    width: 15vw;
+    transform: translateY(15px);
 
 }
 
@@ -312,7 +327,7 @@ section ul li:nth-of-type(4):hover {
 }
 
 .back {
-    font-size: 0.5em;
+
     display: flex;
     flex-direction: column;
     top: 0;
@@ -325,18 +340,26 @@ section ul li:nth-of-type(4):hover {
 
 .back p {
     width: 19vw;
+    font-size: 0.5em;
+}
+.back h3 {
+    font-size: 0.8em;
 }
 
 /* image flip thing */
 
 /* our process */
 .Aboutus section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column-reverse;
     width: 100vw;
     background-color: #7AAB82;
     margin-bottom: 0;
     padding-bottom: 5vh;
 }
-
+.Aboutus section:nth-of-type(3) div:nth-of-type(2){
+    text-align: center;
+}
 
 
 /* Slides */
@@ -348,13 +371,27 @@ section ul li:nth-of-type(4):hover {
     width: 50vw;
 }
 
-.slide {
-    display: none;
+.Aboutus .slideshow-container {
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 }
 
-.slideshow-container img {
-    width: 20vw;
-    height: 50vh;
+.slide {
+    display: none;
+    border: outset #154d59 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.slide p{
+    text-align: center;
+}
+
+.slideshow-container img, .slideshow-container video {
+    width: 50vw;
+    height: auto;
 }
 
 /* Navigation buttons */
@@ -362,8 +399,15 @@ section ul li:nth-of-type(4):hover {
     cursor: pointer;
 }
 .prev{
-    margin-right: 5vw;
+    margin-right: 1vw;
 }
 .next{
-    margin-left: 5vw;
+    margin-left: 1vw;
+}
+
+
+/* speluitleg */
+embed{
+    width: 100vw;
+    height: 100vh;
 }
